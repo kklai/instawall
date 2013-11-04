@@ -1,5 +1,4 @@
-# instawall
-=========
+# Instawall
 
 Browser Instagram feed for idle screens
 ![alt text](https://raw.github.com/kklai/instawall/master/screenshot.png)
