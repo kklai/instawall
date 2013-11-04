@@ -5,10 +5,11 @@ Browser Instagram feed for idle screens
 
 ### Set up
 
-1. Get your access token from [instagram api]
+1. Get a Client ID from [instagram api]
 [instagram api]: http://instagram.com/developer/
-* https://instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token
-* Copy the access token code from the end of the return URL
+* Enter this URL in your browser with your Client ID and redirect URL.
+https://instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token
+* Copy the access token code from the end of the return URL.
 
 2. Replace the text in config_sample.js with your own access token.
 
