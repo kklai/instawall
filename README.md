@@ -2,8 +2,7 @@
 =========
 
 Browser Instagram feed for idle screens
-[screenshot]
-[screenshot]: https://raw.github.com/kklai/instawall/master/screenshot.png
+![alt text](https://raw.github.com/kklai/instawall/master/screenshot.png)
 
 ### Set up
 
