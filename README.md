@@ -4,12 +4,12 @@ Browser-based Instagram feed for idle screens
 ![alt text](https://raw.github.com/kklai/instawall/master/screenshot.png)
 
 ### Live Demo
-Check out a live demo of the page here.
+Check out a live demo of the page [here].
 [here]: http://kkrebeccalai.com/instawall/
 
 ### Set up
 
-1. Get a Client ID from [instagram api]
+1. Get a Client ID from [instagram api].
 [instagram api]: http://instagram.com/developer/
 * Enter this URL in your browser with your Client ID and redirect URL.
 https://instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token
