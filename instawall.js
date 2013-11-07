@@ -16,6 +16,13 @@ function setWidth() {
   $(".ig").css('width', img_width + 'px');
 }
 
+function setHeight(){
+  height = $(window).height();
+  if (height <= 484) {
+    // print more photos
+  }
+}
+
 function getId(){
   for (var i = 0; i < users.length; i++) {
     $.ajax({
@@ -91,6 +98,7 @@ $( document ).ready(function() {
 
 $(window).load(function() {
   setWidth();
+  setHeight();
   getInstagram();
   getInstagram();
   setTimeInterval();
