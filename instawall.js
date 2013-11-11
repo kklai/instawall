@@ -77,14 +77,18 @@ function instagramfeed(input) {
 
 function update() {
   var box = Math.floor((Math.random()*18)+1);
-  var numb = Math.floor((Math.random()*18)+1);
-  $('#' + box).fadeOut('slow', function(){
-    if (ig[numb].type == "video") {
-      $(this).html(video_compiled(ig[numb]));
-    } else {
-      $(this).html(img_compiled(ig[numb]));
-    }
-  }).fadeIn('slow');
+  var numb = Math.floor(Math.random()*9);
+  if (ig[numb].type != undefined) {
+    $('#' + box).fadeOut('slow', function(){
+      if (ig[numb].type == "video") {
+        $(this).html(video_compiled(ig[numb]));
+      } else {
+        $(this).html(img_compiled(ig[numb]));
+      }
+    }).fadeIn('slow');
+  } else {
+    update();
+  }
 }
 
 function setTimeInterval() {
