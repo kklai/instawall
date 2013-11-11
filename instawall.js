@@ -84,12 +84,13 @@ function update() {
     $('#' + box).fadeOut('slow', function(){
       if ((ig[numb] !== undefined) && ig[numb].type == "video") {
         $(this).html(video_compiled(ig[numb]));
-      } else {
+      } else if (ig[numb] !== undefined) {
         $(this).html(img_compiled(ig[numb]));
       }
     }).fadeIn('slow');
   } else {
-    console.log('shit');
+    var numb = Math.floor(Math.random()*9);
+    console.log(ig[numb]);
   }
 }
 
