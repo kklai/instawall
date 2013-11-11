@@ -16,10 +16,13 @@ function setWidth() {
   $(".ig").css('width', img_width + 'px');
 }
 
+var row = 0;
 function setHeight(){
   height = $(window).height();
-  if (height <= 484) {
-    // print more photos
+  if (height >= 800)  {
+    row = 4;
+  } else {
+    row = 3;
   }
 }
 
@@ -65,7 +68,8 @@ var img_compiled = _.template('<a href="<%= link %>" target="_blank"><img src="<
 var counter = 0;
 function instagramfeed(input) {
   var id = Math.floor((Math.random()*20)+1);
-  for (var i = 0; i < (input.length - 2); i++) {
+  // for (var i = 0; i < (input.length - 2); i++) {
+  for (var i = 0; i < (row * 6); i++) {
     counter += 1;
     if (input[i].type == "video") {
       $('body').append('<div class="ig" id="' + counter + '">' + video_compiled(input[i]) + '</div>');
@@ -94,8 +98,13 @@ function update() {
   }
 }
 
+function updateNumbers() {
+  used_numb = [];
+}
+
 function setTimeInterval() {
   window.setInterval(update, 3000);
+  window.setInterval(used_numb, 3000);
   window.setInterval(getInstagram, 6000);
 }
 
