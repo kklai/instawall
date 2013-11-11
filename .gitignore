@@ -1,0 +1,5 @@
+# OS generated files #
+######################
+.DS_Store
+script copy.js
+config.js
