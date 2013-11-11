@@ -75,19 +75,21 @@ function instagramfeed(input) {
   }
 }
 
+var used_numb = [];
 function update() {
   var box = Math.floor((Math.random()*18)+1);
   var numb = Math.floor(Math.random()*9);
-  if (ig[numb].type != undefined) {
+  used_numb.push(numb);
+  if (typeof ig[numb] != "undefined") {
     $('#' + box).fadeOut('slow', function(){
-      if (ig[numb].type == "video") {
+      if ((ig[numb] !== undefined) && ig[numb].type == "video") {
         $(this).html(video_compiled(ig[numb]));
       } else {
         $(this).html(img_compiled(ig[numb]));
       }
     }).fadeIn('slow');
   } else {
-    update();
+    console.log('shit');
   }
 }
 
