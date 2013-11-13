@@ -14,11 +14,11 @@ body {
 }
 
 .ig > img {
-	width: 100%;
+	width: 100% !important;
 }
 
 .ig > video {
-	width: 100%;
+	width: 100% !important;
 }
 
 h2 {
