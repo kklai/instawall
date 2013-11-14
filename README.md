@@ -22,3 +22,5 @@ https://instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT
 4. Personalize the list of users you want to follow in users.js. (Right now it's a list of news organizations and magazines.)
 
 4. Run the directory on a local host!
+
+* The program also adjusts to browser heights as well, just refresh and it should feel up extra space!
