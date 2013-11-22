@@ -21,6 +21,7 @@ function setHeight(){
   height = $(window).height();
   if (height >= 800)  {
     row = 4;
+    $('.insta').css('margin-top', '-30px');
   } else {
     row = 3;
   }
@@ -61,9 +62,9 @@ function getInstagram() {
   });
 }
 
-var video_compiled = _.template('<a href="<%= link %>" target="_blank"><video width="100%" autoplay muted loop transparent><source src="<%= videos.standard_resolution.url %>" type="video/mp4"></video></a>');
+var video_compiled = _.template('<a href="<%= link %>" target="_blank"><video width="100%" autoplay muted loop transparent><source src="<%= videos.standard_resolution.url %>" type="video/mp4"></video></a><div class="insta-label"><p><%= user.username %></p></div>');
 
-var img_compiled = _.template('<a href="<%= link %>" target="_blank"><img src="<%= images.standard_resolution.url %>" width="100%"/></a>');
+var img_compiled = _.template('<a href="<%= link %>" target="_blank"><img src="<%= images.standard_resolution.url %>" width="100%"/></a><div class="insta-label"><p><%= user.username %></p></div>');
 
 var counter = 0;
 function instagramfeed(input) {
@@ -71,9 +72,9 @@ function instagramfeed(input) {
   for (var i = 0; i < (row * 6); i++) {
     counter += 1;
     if (input[i].type == "video") {
-      $('body').append('<div class="ig" id="' + counter + '">' + video_compiled(input[i]) + '</div>');
+      $('.insta').append('<div class="ig" id="' + counter + '">' + video_compiled(input[i]) + '</div>');
     } else {
-      $('body').append('<div class="ig" id="' + counter + '">' + img_compiled(input[i]) + '</div>');
+      $('.insta').append('<div class="ig" id="' + counter + '">' + img_compiled(input[i]) + '</div>');
     }
   }
 }
