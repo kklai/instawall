@@ -62,8 +62,8 @@ function getInstagram() {
   });
 }
 
-var video_compiled = _.template('<a href="<%= link %>" target="_blank"><video width="100%" autoplay muted loop transparent><source src="<%= videos.standard_resolution.url %>" type="video/mp4"></video></a><div class="insta-label"><p><%= user.username %></p></div>');
-var img_compiled = _.template('<a href="<%= link %>" target="_blank"><img src="<%= images.standard_resolution.url %>" width="100%"/></a><div class="insta-label"><p><%= user.username %></p></div>');
+var video_compiled = _.template('<a href="<%= link %>" target="_blank"><video width="100%" autoplay muted loop transparent><source src="<%= videos.low_resolution.url %>" type="video/mp4"></video></a><div class="insta-label"><p><%= user.username %></p></div>');
+var img_compiled = _.template('<a href="<%= link %>" target="_blank"><img src="<%= images.low_resolution.url %>" width="100%"/></a><div class="insta-label"><p><%= user.username %></p></div>');
 
 var counter = 0;
 function instagramfeed(input) {
