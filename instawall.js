@@ -27,6 +27,15 @@ function setHeight(){
   }
 }
 
+function authenticate(){
+  OAuth.initialize('eurVsf8yPYqHOUYoBEwMwyaZMCg');
+  OAuth.popup('instagram', function(error, result) {
+      //handle error with error
+      //use result.access_token in your API request
+      access_token = result.access_token;
+    });
+}
+
 function getId(){
   for (var i = 0; i < users.length; i++) {
     $.ajax({
@@ -114,7 +123,7 @@ function setTimeInterval() {
 }
 
 $( document ).ready(function() {
-  OAuth.initialize('eurVsf8yPYqHOUYoBEwMwyaZMCg');
+  authenticate();
   getId();
   setHeight();
 });
