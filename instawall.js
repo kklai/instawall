@@ -6,7 +6,7 @@ var id = [];
 
 function setWidth() {
   width = $(window).width();
-  if (width > 1200) {
+  if (width > 1100) {
     img_width = Math.floor(width / 6.2);
   } else if (width > 500){
     img_width = Math.floor(width / 4.1);
@@ -63,7 +63,6 @@ function getInstagram() {
 }
 
 var video_compiled = _.template('<a href="<%= link %>" target="_blank"><video width="100%" autoplay muted loop transparent><source src="<%= videos.standard_resolution.url %>" type="video/mp4"></video></a><div class="insta-label"><p><%= user.username %></p></div>');
-
 var img_compiled = _.template('<a href="<%= link %>" target="_blank"><img src="<%= images.standard_resolution.url %>" width="100%"/></a><div class="insta-label"><p><%= user.username %></p></div>');
 
 var counter = 0;
@@ -77,6 +76,7 @@ function instagramfeed(input) {
       $('.insta').append('<div class="ig" id="' + counter + '">' + img_compiled(input[i]) + '</div>');
     }
   }
+  setWidth();
 }
 
 var used_numb = [];
@@ -114,6 +114,7 @@ function setTimeInterval() {
 }
 
 $( document ).ready(function() {
+  OAuth.initialize('eurVsf8yPYqHOUYoBEwMwyaZMCg');
   getId();
   setHeight();
 });
