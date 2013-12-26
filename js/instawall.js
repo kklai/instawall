@@ -21,7 +21,7 @@ function setHeight(){
   height = $(window).height();
   if (height >= 800)  {
     row = 4;
-    $('.insta').css('margin-top', '-30px');
+    $('.insta').css('margin-top', '-5px');
   } else {
     row = 3;
   }
