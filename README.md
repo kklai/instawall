@@ -9,6 +9,6 @@ Check out a live demo of the page [here].
 
 ### Set up
 
-Personalize the list of users you want to follow in users.js. (Right now it's a list of news organizations and magazines.)
+Personalize the list of users you want to follow in users.js. Right now it's a list of news organizations and magazines.
 
-Run the directory on a local host! (Must be on localhost:8000 for the redirect url)
+Run the directory on a local host! It must be on localhost:8000 for the redirect url to work.
