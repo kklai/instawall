@@ -1,18 +1,35 @@
 <html>
 <head>
-	<title>Instawall</title>
-	<link href="http://cdn.knightlab.com/libs/blueline/latest/css/blueline.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title></title>
+  <!-- style -->
+  <link href="http://cdn.knightlab.com/libs/blueline/latest/css/blueline.min.css" rel="stylesheet">
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-	<script src="http://cdn.knightlab.com/libs/blueline/latest/js/blueline.min.js"></script>
-	<script src="js/config.js"></script>
-	<script src="js/users.js"></script>
-	<script src="js/instawall.js"></script>
+  <!-- scripts -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://cdn.knightlab.com/libs/blueline/latest/js/blueline.min.js"></script>
+	<script src="js/oauth.js"></script>
+	<script src="js/authenticate.js"></script>
+	<style type="text/css">
+    body {
+      background-color: #000;
+    }
+    .screenshot {
+      margin-top: 100px;
+      text-align: center;
+    }
+		.login {
+      margin: 0 auto;
+      /*margin-top: 200px;*/
+      padding: 10px;
+      height: 30px;
+      width: 160px;
+      border-radius: 10px;
+			background-color: #ececec;
+		}
+	</style>
 </head>
 <body>
-	<!-- BEGIN HEADER -->
+  <!-- BEGIN HEADER -->
 
   <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
@@ -32,8 +49,9 @@
     </div><!-- /navbar-inner -->
   </div>
   <!-- END HEADER -->
-  <div class="insta"></div>
-
-
+  <div class="screenshot">
+    <img src="screenshot.png" width="600">
+  </div>
+	<div class="login">Log in with Instagram</div>
 </body>
-</html> 
+</html>
