@@ -1,1 +1,0 @@
-var access_token = 'ENTER YOUR ACCESS TOKEN';
