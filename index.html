@@ -10,21 +10,21 @@
 	<script src="js/authenticate.js"></script>
 	<style type="text/css">
     body {
-      background-color: #000;
+      /*background-color: #333333;*/
     }
-    .screenshot {
-      margin-top: 100px;
-      text-align: center;
+    body {
+      background: url('screenshot.png') no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
     }
-		.login {
-      margin: 0 auto;
-      margin-top: 20px;
-      padding: 10px;
-      height: 30px;
-      width: 160px;
-      border-radius: 10px;
-			background-color: #ececec;
-		}
+    #intro {
+      margin-top: -10px;
+    }
+    h1  {
+      font-family: SalvoSerif;
+    }
 	</style>
 </head>
 <body>
@@ -48,9 +48,11 @@
     </div><!-- /navbar-inner -->
   </div>
   <!-- END HEADER -->
-  <div class="screenshot">
-    <img src="screenshot.png" width="600">
-  </div>
-	<div class="login">Log in with Instagram</div>
+  <header id="intro" class="hero-unit">
+    <h1 class="logo-mark xl">Instawall</h1>
+    <h2 class="intro">Real-time news updates from Instagram</h2>
+    <p><a href="#create-new" class="btn btn-large btn-success login">Log in with Instagram</a></p>
+  </header>
+  <div class="screenshot"></div>
 </body>
 </html>
