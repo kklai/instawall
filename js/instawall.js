@@ -17,7 +17,7 @@ function setHeight(){
   height = $(window).height();
   if (height >= 800)  {
     row = 4;
-    $('.insta').css('margin-top', '-5px');
+    $('.instawall').css('margin-top', '-5px');
   } else {
     row = 3;
   }
@@ -67,24 +67,26 @@ function instagramfeed(input) {
   for (var i = 0; i < (row * 6); i++) {
     counter += 1;
     if (input[i].type == "video") {
-      $('.insta').append('<div class="ig" id="' + counter + '">' + video_compiled(input[i]) + '</div>');
+      $('.instawall').append('<div class="ig" id="' + counter + '">' + video_compiled(input[i]) + '</div>');
     } else {
-      $('.insta').append('<div class="ig" id="' + counter + '">' + img_compiled(input[i]) + '</div>');
+      $('.instawall').append('<div class="ig" id="' + counter + '">' + img_compiled(input[i]) + '</div>');
     }
   }
   setWidth();
 }
 
+
 var used_numb = [];
+var numbs = [];
 function update() {
   var box = Math.floor((Math.random()* (row * 6))+1);
   var numb = Math.floor(Math.random()*9);
-  used_numb.push(numb);
   for (var i = 0; i < used_numb.length; i++) {
-    if (numb === i){
+    if (numb === used_numb[i]){
       numb = Math.floor(Math.random()*9);
     }
   }
+  used_numb.push(numb);
   if (typeof ig[numb] != "undefined") {
     $('#' + box).fadeOut('slow', function(){
       if ((ig[numb] !== undefined) && ig[numb].type == "video") {
@@ -93,9 +95,6 @@ function update() {
         $(this).html(img_compiled(ig[numb]));
       }
     }).fadeIn('slow');
-  } else {
-    var numb = Math.floor(Math.random()*9);
-    console.log(ig[numb]);
   }
 }
 
