@@ -1,8 +1,4 @@
-var ig;
-var data;
-var width;
-var img_width;
-var id = [];
+var ig, data, width, img_width, id = [];
 
 function setWidth() {
   width = $(window).width();
