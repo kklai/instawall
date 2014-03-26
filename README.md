@@ -5,7 +5,7 @@ Browser-based Instagram feed for idle screens
 
 ### Live Demo
 Check out a live demo of the page [here].
-[here]: http://kkrebeccalai.com/instawall/
+[here]: http://kklai.github.io/instawall
 
 ### Set up
 
